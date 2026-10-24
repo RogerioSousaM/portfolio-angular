@@ -1,0 +1,46 @@
+<section class="experience section-pad">
+  <div class="container name-block">
+    <h1>
+      <span>ROGÉRIO</span>
+      <span>SOUSA MOREIRA</span>
+    </h1>
+  </div>
+
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">EXPERIÊNCIA</p>
+      <h2>Experiência Profissional</h2>
+      <div class="heading-rule"></div>
+    </div>
+
+    <div class="experience-list">
+      @for (experience of experiences; track experience.company) {
+      <mat-card class="experience-card">
+        <div class="experience-title">
+          <h3>{{ experience.title }}</h3>
+          <span>{{ experience.period }}</span>
+        </div>
+        <p class="company">{{ experience.company }}</p>
+        <ul>
+          @for (bullet of experience.bullets; track bullet) {
+          <li>{{ bullet }}</li>
+          }
+        </ul>
+      </mat-card>
+      }
+
+      <mat-card class="experience-card education">
+        <h3>Formação</h3>
+        <p>
+          <strong>Pós-graduação em Engenharia de Software</strong> — PUC Minas<br>
+          <small>Em andamento</small>
+        </p>
+        <p>
+          <strong>Redes de Computadores</strong> — UNICID
+        </p>
+        <h3>Idiomas</h3>
+        <p>Inglês: Básico</p>
+      </mat-card>
+    </div>
+  </div>
+</section>

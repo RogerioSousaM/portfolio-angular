@@ -1,0 +1,55 @@
+<header class="site-header">
+  <mat-toolbar class="container">
+    <div class="header-row">
+      <span class="brand">PORTFÓLIO</span>
+
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <button
+          mat-button
+          type="button"
+          [class.active]="activeSection() === 'home'"
+          [attr.aria-current]="activeSection() === 'home' ? 'page' : null"
+          (click)="scrollToSection('home')"
+        >
+          INÍCIO
+        </button>
+        <button
+          mat-button
+          type="button"
+          [class.active]="activeSection() === 'projects'"
+          [attr.aria-current]="activeSection() === 'projects' ? 'page' : null"
+          (click)="scrollToSection('projects')"
+        >
+          PROJETOS
+        </button>
+        <button
+          mat-button
+          type="button"
+          [class.active]="activeSection() === 'contact'"
+          [attr.aria-current]="activeSection() === 'contact' ? 'page' : null"
+          (click)="scrollToSection('contact')"
+        >
+          CONTATO
+        </button>
+      </nav>
+
+      <button
+        mat-icon-button
+        class="mobile-menu-toggle"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        [matMenuTriggerFor]="mobileMenu"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <mat-menu #mobileMenu="matMenu" aria-label="Navegação móvel">
+      <button mat-menu-item type="button" (click)="scrollToSection('home')">INÍCIO</button>
+      <button mat-menu-item type="button" (click)="scrollToSection('projects')">PROJETOS</button>
+      <button mat-menu-item type="button" (click)="scrollToSection('contact')">CONTATO</button>
+    </mat-menu>
+  </mat-toolbar>
+</header>

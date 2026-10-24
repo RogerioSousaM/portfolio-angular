@@ -1,0 +1,183 @@
+:host {
+  display: block;
+}
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  border-top: 1px solid hsl(220 15% 20% / 0.5);
+  background: var(--background);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.decoration {
+  position: absolute;
+  border: 1px solid var(--portfolio-accent);
+  border-radius: 50%;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.decoration-top {
+  top: 2.5rem;
+  left: 25%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.decoration-bottom {
+  right: 25%;
+  bottom: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.footer-main {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  p {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    color: var(--portfolio-text-dim);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  a {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 1rem;
+    background: hsl(220 15% 10% / 0.5);
+    color: var(--portfolio-text-dim);
+    transition:
+      background 0.3s,
+      transform 0.3s,
+      color 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      background: hsl(200 25% 40% / 0.2);
+      color: var(--portfolio-accent);
+    }
+  }
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+  }
+}
+
+.footer-rule {
+  width: 6rem;
+  height: 1px;
+  margin: 0 auto 1.5rem;
+  background: var(--portfolio-accent);
+  opacity: 0.4;
+}
+
+.copyright {
+  padding-top: 1.5rem;
+  border-top: 1px solid hsl(220 15% 20% / 0.3);
+
+  p {
+    margin: 0;
+    padding: 0 1rem;
+    color: var(--portfolio-text-dim);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 640px) {
+  .site-footer {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .footer-main {
+    margin-bottom: 3rem;
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .social-links {
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    a {
+      width: 56px;
+      height: 56px;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .footer-rule {
+    width: 8rem;
+    margin-bottom: 2rem;
+  }
+
+  .copyright {
+    padding-top: 2rem;
+
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  .decoration-top {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .decoration-bottom {
+    width: 8rem;
+    height: 8rem;
+  }
+}

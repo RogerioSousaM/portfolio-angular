@@ -1,0 +1,25 @@
+<section class="skills-section">
+  <div id="home" class="home-anchor"></div>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Habilidades Técnicas</h2>
+      <div class="heading-rule"></div>
+      <p class="intro">
+        Tecnologias e ferramentas que mais utilizo. Sempre buscando aprendizado contínuo e aplicação prática em projetos.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      @for (skill of skills; track skill.category) {
+        <mat-card class="skill-card">
+          <h3>{{ skill.category }}</h3>
+          <ul>
+            @for (item of skill.items; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>

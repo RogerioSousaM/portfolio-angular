@@ -1,0 +1,30 @@
+.not-found {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  color: #111827;
+  text-align: center;
+
+  h1 {
+    margin: 0 0 1rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    color: #4b5563;
+    font-size: 1.25rem;
+  }
+
+  a {
+    color: #3b82f6;
+    text-decoration: underline;
+
+    &:hover {
+      color: #1d4ed8;
+    }
+  }
+}
